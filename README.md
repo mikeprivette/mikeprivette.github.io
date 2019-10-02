@@ -10,7 +10,7 @@ Mike enjoys being around and being apart of technology and prizes intellectual c
 
 Mike sees himself as a technology generalist who just so happened to work in the cybersecurity field. Mike's approach to leading and building technology organizations focuses on the operational flow of work, the end-user experience, and customer service.
 
-Mike knows that technology alone does not solve most problems. Applying the right combination of soft skills, attitude, and motivation to the problem-solving process is often more important than the technology. Aligning on a shared vision helps smooth the path the technology enablement.
+Mike knows that technology alone does not solve most problems. Applying the right combination of soft skills, attitude, and motivation to the problem-solving process is often more important than the technology. Strong communication and aligning on a shared vision helps smooth the path with technology enablement.
 
 ## Advising
 
