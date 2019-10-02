@@ -4,7 +4,7 @@ Mike has progressive experience leading and building cybersecurity programs in t
 
 Mike received his MBA from Duke University and has two bachelors of science degrees in Management Information Systems and Accounting from UNC Wilmington.
 
-Mike enjoys being around and being apart of technology and prizes intellectual curiosity. In his spare time, Mike is a fitness enthusiast, enjoys reading about developing IT and cybersecurity news, and is often tinkering with with new technologies.
+Mike enjoys being around technology and prizes intellectual curiosity. In his spare time, Mike is a fitness enthusiast, enjoys reading about developing IT and cybersecurity news, and is often tinkering with with new technologies.
 
 ## Technology Philosophy
 
@@ -14,4 +14,4 @@ Mike knows that technology alone does not solve most problems. Applying the righ
 
 ## Advising
 
-Mike advises and mentors companies of various sizes from a technology and cybersecurity standpoint. Use the links above to see if there is mutual fit.
+Mike advises and mentors companies of various sizes from a technology and cybersecurity standpoint. Use the links above to connect with Mike to see if there is mutual fit.
