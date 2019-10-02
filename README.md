@@ -14,4 +14,4 @@ Mike knows that technology alone does not solve most problems. Applying the righ
 
 ## Advising
 
-Mike advises and mentors companies of various sizes from a technology and cybersecurity standpoint. Use the links above to connect with Mike to see if there is mutual fit.
+Mike advises and mentors companies of various sizes from a technology and cybersecurity standpoint. Use the links above to connect with Mike to see if there is a mutual fit.
