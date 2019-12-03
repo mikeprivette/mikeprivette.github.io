@@ -10,6 +10,6 @@ Mike is a technology generalist who just so happens to work in the cybersecurity
 
 Mike knows that technology alone does not solve most problems. Applying the right combination of soft skills, attitude, and motivation to the problem-solving process is often more important than the technology itself. Strong communication and aligning on a shared understanding of the problem smoothes the path to technology enablement.
 
-## Advising
+## Consulting
 
-Mike advises and mentors companies of various sizes from a technology and cybersecurity standpoint. Use the links above to connect with Mike to see if there is a mutual fit.
+Mike consults, advises, and mentors companies of various sizes from a strategy, technology, and cybersecurity standpoint by way of Fraction Consulting, LLC. Use the links above to connect with Mike to explore if there is a mutual fit.
