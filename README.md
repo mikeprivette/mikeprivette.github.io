@@ -16,4 +16,4 @@ Mike consults, advises, and mentors companies of various sizes from a strategy, 
 
 ## Newsletter
 
-Mike also write a newsletter named [Cybersecurity Market Insights](https://securityinsights.substack.com/welcome)to help private investors and buyers of cybersecurity products make more informed decisions.
+Mike also write a newsletter named [Cybersecurity Market Insights](https://securityinsights.substack.com/welcome) to help private investors and buyers of cybersecurity products make more informed decisions.
