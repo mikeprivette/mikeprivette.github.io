@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "title": "Threat Model Test",
+    "owner": "Mike",
+    "description": "mikeprivette.com"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "Title 1",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "Mike"
+  }
+}
