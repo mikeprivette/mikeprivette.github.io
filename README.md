@@ -2,7 +2,7 @@
 
 Mike has progressive experience leading and building cybersecurity programs in the Financial Services industry at both regional and global banks and insurance companies. He has hands-on leadership experience with engineering, operational, and risk management focused teams.
 
-Mike enjoys being around technology and prizes intellectual curiosity. In his spare time, Mike is a fitness enthusiast, enjoys reading about developing IT and cybersecurity news, and is often tinkering with with new technologies.
+Mike enjoys being around technology and prizes intellectual curiosity. In his spare time, Mike is a fitness enthusiast, enjoys reading about developing IT and cybersecurity news, and is often tinkering with new technologies.
 
 ## Technology Philosophy
 
