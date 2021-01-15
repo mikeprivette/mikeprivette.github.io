@@ -12,8 +12,8 @@ Mike knows that technology alone does not solve most problems. Applying the righ
 
 ## Consulting
 
-Mike consults, advises, and mentors companies of various sizes from a strategy, technology, and cybersecurity standpoint by way of [Fraction Consulting](https://fractionconsulting.co). Use the links above to connect with Mike to explore if there is a mutual fit.
+Mike consults, advises, and mentors companies of various sizes from a strategy, technology, and cybersecurity standpoint by way of [Fraction Consulting](https://fractionconsulting.co).
 
 ## Newsletter
 
-Mike also writes a newsletter named [Cybersecurity Market Insights](https://fractionconsulting.co/blog/) to help private investors and buyers of cybersecurity products make more informed decisions.
+Mike writes a newsletter named [Cybersecurity Market Insights](https://signup.fractionconsulting.co/) to help private investors and buyers of cybersecurity products make more informed decisions.
