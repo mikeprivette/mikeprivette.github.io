@@ -1,19 +1,27 @@
-## About Mike
+## About Me
 
-Mike has progressive experience leading and building cybersecurity programs in the Financial Services industry at both regional and global banks and insurance companies. He has hands-on leadership experience with engineering, operational, and risk management focused teams.
+I enjoy being around technology and prize intellectual curiosity. I focus on the operational flow of work and the end-user experience, with a customer service orientation.
 
-Mike enjoys being around technology and prizes intellectual curiosity. In his spare time, Mike is a fitness enthusiast, enjoys reading about developing IT and cybersecurity news, and is often tinkering with new technologies.
+I have progressive experience leading and building cybersecurity programs in the Financial Services industry at both regional and global banks and insurance companies. I have hands-on leadership experience with engineering, operational, and risk management focused teams.
 
-## Technology Philosophy
+Technology alone does not solve most problems; applying the right combination of approach, attitude, and problem-solving is often more important than the technology itself.
 
-Mike is a technology generalist who just so happens to work in the cybersecurity field. Mike's approach to leading and building technology organizations focuses on the operational flow of work, the end-user experience, and a customer service orientation.
+In my spare time:
 
-Mike knows that technology alone does not solve most problems. Applying the right combination of soft skills, attitude, and motivation to the problem-solving process is often more important than the technology itself. Strong communication and aligning on a shared understanding of the problem smoothes the path to technology enablement.
+- I'm a fitness enthusiast.
+- I like writing.
+- I like building businesses and building products.
+- I like to tinker with new technologies.
+- I like reading about developing IT and cybersecurity news.
+- I like reading about philosophy.
 
-## Consulting
+## Writing
 
-Mike consults, advises, and mentors companies of various sizes from a strategy, technology, and cybersecurity standpoint by way of [Fraction Consulting](https://fractionconsulting.co).
+I run the site [Return on Security](https://www.returnonsecurity.com) where I post original content, do deep dive reports, and send out newsletters.
 
-## Newsletter
+## Current Projects
 
-Mike writes a newsletter named [Cybersecurity Market Insights](https://signup.fractionconsulting.co/) to help private investors and buyers of cybersecurity products make more informed decisions.
+* [Return on Security](https://www.returnonsecurity.com)
+* [Free Career Guidance](https://gum.co/job-indecision-guidance)
+* [The Job Indecision Calculator](https://jobindecision.xyz)
+* [Freelance Toolkit](https://appsumo.com/products/marketplace-freelance-toolkit/)
