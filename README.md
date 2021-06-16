@@ -21,7 +21,7 @@ I run the site [Return on Security](https://www.returnonsecurity.com) where I po
 
 ## Current Projects
 
-* [Return on Security](https://www.returnonsecurity.com)
-* [Free Career Guidance](https://gum.co/job-indecision-guidance)
-* [The Job Indecision Calculator](https://jobindecision.xyz)
-* [Freelance Toolkit](https://appsumo.com/products/marketplace-freelance-toolkit/)
+- [Return on Security](https://www.returnonsecurity.com)
+- [Free Career Guidance](https://gum.co/job-indecision-guidance)
+- [The Job Indecision Calculator](https://jobindecision.xyz)
+- [Freelance Toolkit](https://appsumo.com/products/marketplace-freelance-toolkit/)
