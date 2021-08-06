@@ -6,14 +6,15 @@ I have progressive experience leading and building cybersecurity programs in the
 
 Technology alone does not solve most problems; applying the right combination of approach, attitude, and problem-solving is often more important than the technology itself.
 
-In my spare time:
+## Things I enjoy
 
 - I'm a fitness enthusiast.
 - I like writing.
+- I like spreadsheets.
 - I like building businesses and building products.
 - I like to tinker with new technologies.
 - I like reading about developing IT and cybersecurity news.
-- I like reading about philosophy.
+- I like reading about history, science, and philosophy.
 
 ## Writing
 
@@ -22,6 +23,6 @@ I run the site [Return on Security](https://www.returnonsecurity.com) where I po
 ## Current Projects
 
 - [Return on Security](https://www.returnonsecurity.com)
-- [Free Career Guidance](https://gum.co/job-indecision-guidance)
+- [Event Timeline & Agenda Builder](https://mikeprivette.gumroad.com/l/event-time)
 - [The Job Indecision Calculator](https://jobindecision.xyz)
 - [Freelance Toolkit](https://appsumo.com/products/marketplace-freelance-toolkit/)
