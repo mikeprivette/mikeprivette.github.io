@@ -20,9 +20,11 @@ Technology alone does not solve most problems; applying the right combination of
 
 I run the site [Return on Security](https://www.returnonsecurity.com) where I post original content, do deep dive reports, and send out newsletters.
 
+I write 
+
 ## Current Projects
 
 - [Security, Funded](https://securityfunded.com)
 - [Return on Security](https://www.returnonsecurity.com)
+- [The Ultimate Freelance Toolkit](https://appsumo.com/products/marketplace-freelance-toolkit/)
 - [The Job Indecision Calculator](https://jobindecision.xyz)
-- [Freelance Toolkit](https://appsumo.com/products/marketplace-freelance-toolkit/)
