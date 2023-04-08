@@ -18,13 +18,15 @@ Technology alone does not solve most problems; applying the right combination of
 
 ## Writing
 
-I run the site [Return on Security](https://www.returnonsecurity.com) where I post original content, do deep dive reports, and send out newsletters.
+I run the site [Return on Security](https://www.returnonsecurity.com) where I post original content on various topics about the cybersecurity industry and advancing in the cybersecurity field.
 
-I write 
-
-## Current Projects
-
+I currently write the following newsletters:
 - [Security, Funded](https://securityfunded.com)
-- [Return on Security](https://www.returnonsecurity.com)
+- [Secure the Job](https://jobs.returnonsecurity.com)
+
+Let me know if you want to work together!
+
+## Others Projects
+
 - [The Ultimate Freelance Toolkit](https://appsumo.com/products/marketplace-freelance-toolkit/)
 - [The Job Indecision Calculator](https://jobindecision.xyz)
