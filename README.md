@@ -9,8 +9,8 @@ Technology alone does not solve most problems; applying the right combination of
 ## Things I enjoy
 
 - I like writing.
+- I like exercising.
 - I like spreadsheets.
-- I'm a fitness enthusiast.
 - I like to tinker with new technologies.
 - I like building businesses and building products.
 - I like reading about history, science, and philosophy.
