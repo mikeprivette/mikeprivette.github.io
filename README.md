@@ -8,13 +8,13 @@ Technology alone does not solve most problems; applying the right combination of
 
 ## Things I enjoy
 
-- I'm a fitness enthusiast.
 - I like writing.
 - I like spreadsheets.
-- I like building businesses and building products.
+- I'm a fitness enthusiast.
 - I like to tinker with new technologies.
-- I like reading about developing IT and cybersecurity news.
+- I like building businesses and building products.
 - I like reading about history, science, and philosophy.
+- I like reading about developing IT and cybersecurity news.
 
 ## Writing
 
@@ -22,7 +22,7 @@ I run the site [Return on Security](https://www.returnonsecurity.com) where I po
 
 ## Current Projects
 
+- [Security, Funded](https://securityfunded.com)
 - [Return on Security](https://www.returnonsecurity.com)
-- [Event Timeline & Agenda Builder](https://mikeprivette.gumroad.com/l/event-time)
 - [The Job Indecision Calculator](https://jobindecision.xyz)
 - [Freelance Toolkit](https://appsumo.com/products/marketplace-freelance-toolkit/)
