@@ -10,7 +10,7 @@ Technology alone does not solve most problems; applying the right combination of
 
 - I like writing.
 - I like exercising.
-- I like spreadsheets.
+- I like spreadsheets (seriously).
 - I like to tinker with new technologies.
 - I like building businesses and building products.
 - I like reading about history, science, and philosophy.
@@ -24,5 +24,6 @@ Let me know if you want to work together!
 
 ## Other Projects
 
+- [CareerSec: Securing Your Advancement in the Cyber Workforce](https://mikeprivette.gumroad.com/l/avoiding-lateral-movement)
 - [The Ultimate Freelance Toolkit](https://mikeprivette.gumroad.com/l/freelance-toolkit)
 - [The Job Indecision Calculator](https://jobindecision.xyz)
