@@ -18,12 +18,4 @@ Technology alone does not solve most problems; applying the right combination of
 
 ## Writing
 
-I run the site [Return on Security](https://www.returnonsecurity.com), where I post original content on various topics about the cybersecurity industry and advancing in the cybersecurity field.
-
-Let me know if you want to work together!
-
-## Other Projects
-
-- [CareerSec: Securing Your Advancement in the Cyber Workforce](https://mikeprivette.gumroad.com/l/avoiding-lateral-movement)
-- [The Ultimate Freelance Toolkit](https://mikeprivette.gumroad.com/l/freelance-toolkit)
-- [The Job Indecision Calculator](https://jobindecision.xyz)
+I run [Return on Security](https://www.returnonsecurity.com), where I post original content on various topics about the cybersecurity industry and advancing in the cybersecurity field.
