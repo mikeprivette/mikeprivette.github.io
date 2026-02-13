@@ -29,18 +29,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap">
 
+    <!-- Theme detection: runs before paint to prevent FOUC -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved) {
+                document.documentElement.setAttribute('data-theme', saved);
+            } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+
     <style>
         /* ===== DARK THEME (default) ===== */
         :root, [data-theme="dark"] {
             --bg: #0a0e14;
-            --surface: #0d1117;
             --border: #1a2332;
             --text: #c9d1d9;
             --text-bright: #f0f6fc;
             --text-dim: #6e7681;
             --accent: #3fb950;
             --accent-dim: #1a3a2a;
-            --link: #58a6ff;
             --amber: #d29922;
             --scanline-opacity: 0.03;
             --toggle-bg: #1a2332;
@@ -49,14 +59,12 @@
         /* ===== LIGHT THEME ===== */
         [data-theme="light"] {
             --bg: #f6f5f0;
-            --surface: #eceae3;
             --border: #d5d2c8;
             --text: #3d3b37;
             --text-bright: #1a1918;
             --text-dim: #8a8780;
             --accent: #2d7d3a;
             --accent-dim: #dde8d6;
-            --link: #2563aa;
             --amber: #b07d18;
             --scanline-opacity: 0.015;
             --toggle-bg: #d5d2c8;
@@ -303,6 +311,14 @@
 
         ::selection { background: var(--accent); color: var(--bg); }
 
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
         @media (max-width: 480px) {
             .container { padding: 2rem 1.25rem 4rem; }
             .name { font-size: 1.6rem; }
@@ -324,14 +340,14 @@
             <div class="tagline">Cybersecurity economist · <em>Market intelligence for an opaque industry</em></div>
         </header>
 
-        <div class="section">
-            <div class="section-label">About</div>
+        <section class="section">
+            <h2 class="section-label">About</h2>
             <p>I study how money moves through cybersecurity. 18+ years building and leading security programs at banks, insurers, and enterprises — now I map the market from the outside.</p>
             <p>I run a market intelligence business that sits at the intersection of practitioner knowledge and capital flows. I brief governments, advise investors, and publish the data the industry lacks.</p>
-        </div>
+        </section>
 
-        <div class="section">
-            <div class="section-label">Work</div>
+        <section class="section">
+            <h2 class="section-label">Work</h2>
             <div class="work-item">
                 <div class="work-title"><a href="https://www.returnonsecurity.com" target="_blank" rel="noopener">Return on Security</a></div>
                 <div class="work-desc">Cybersecurity market intelligence — a curated database of 3,500+ companies, weekly funding analysis, and original research for investors and operators.</div>
@@ -357,22 +373,22 @@
                     <span class="tag">framework</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
-            <div class="section-label">Now</div>
+        <section class="section">
+            <h2 class="section-label">Now</h2>
             <div class="now-item">Building data infrastructure to make cybersecurity market intelligence programmable</div>
             <div class="now-item">Writing weekly for 16,000+ subscribers tracking cybersecurity capital flows</div>
             <div class="now-item">Exploring buy-side M&amp;A advisory for PE firms in cybersecurity</div>
-        </div>
+        </section>
 
-        <div class="section">
-            <div class="section-label">Previously</div>
+        <section class="section">
+            <h2 class="section-label">Previously</h2>
             <p>CISO and security leadership across financial services — regional banks, global banks, insurance. Built programs, led engineering and risk teams, and learned how enterprises actually buy and deploy security.</p>
-        </div>
+        </section>
 
-        <div class="section">
-            <div class="section-label">Elsewhere</div>
+        <section class="section">
+            <h2 class="section-label">Elsewhere</h2>
             <div class="links">
                 <a href="https://www.returnonsecurity.com" target="_blank" rel="noopener">Newsletter</a>
                 <a href="https://www.linkedin.com/in/mikeprivette/" target="_blank" rel="noopener">LinkedIn</a>
@@ -380,7 +396,7 @@
                 <a href="https://github.com/mikeprivette" target="_blank" rel="noopener">GitHub</a>
                 <a href="mailto:mike@returnonsecurity.com">Email</a>
             </div>
-        </div>
+        </section>
 
         <footer class="footer">
             <div class="location">Based in London · American abroad · Building in public</div>
@@ -407,17 +423,11 @@
             meta.setAttribute('content', theme === 'dark' ? '#0a0e14' : '#f6f5f0');
         }
 
+        // Sync toggle UI and theme-color meta with the theme already set in <head>
         (function() {
-            var saved = localStorage.getItem('theme');
-            if (saved) {
-                document.documentElement.setAttribute('data-theme', saved);
-                updateToggle(saved);
-                updateThemeColor(saved);
-            } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-                document.documentElement.setAttribute('data-theme', 'light');
-                updateToggle('light');
-                updateThemeColor('light');
-            }
+            var theme = document.documentElement.getAttribute('data-theme') || 'dark';
+            updateToggle(theme);
+            updateThemeColor(theme);
         })();
     </script>
 </body>
