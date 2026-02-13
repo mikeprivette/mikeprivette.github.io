@@ -1,0 +1,22 @@
+{{ define "main" }}
+        <a href="/writing/" class="back-link">Back to writing</a>
+
+        <article>
+            <header class="article-header">
+                <h1 class="article-title">{{ .Title }}</h1>
+                <div class="article-meta">{{ .Date.Format "January 2, 2006" }}{{ with .Params.readingTime }} · {{ . }} min read{{ end }}</div>
+            </header>
+
+            <div class="article-content">
+                {{ .Content }}
+            </div>
+        </article>
+
+        <section class="section" style="margin-top: 3rem;">
+            <div class="links">
+                <a href="/writing/">All writing</a>
+                <a href="/">Home</a>
+                <a href="https://x.com/mikepsecuritee" target="_blank" rel="noopener">Discuss on X</a>
+            </div>
+        </section>
+{{ end }}
