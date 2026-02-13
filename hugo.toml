@@ -1,0 +1,38 @@
+baseURL = "https://mikeprivette.com/"
+languageCode = "en-us"
+title = "Mike Privette — Cybersecurity Economist"
+
+[params]
+  description = "Cybersecurity economist. Market intelligence for an opaque industry."
+  author = "Mike Privette"
+  twitterHandle = "@mikepsecuritee"
+  email = "mike@returnonsecurity.com"
+  ogImage = "/images/og-image.png"
+  # Google Analytics: add your GA4 measurement ID here (e.g., "G-XXXXXXXXXX")
+  # The old UA-166194158-1 was Universal Analytics (sunset July 2023).
+  # Create a GA4 property at https://analytics.google.com and paste the ID below.
+  # googleAnalytics = "G-XXXXXXXXXX"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "feed"
+
+[taxonomies]
+
+[menu]
+  [[menu.main]]
+    name = "Writing"
+    url = "/writing/"
+    weight = 1

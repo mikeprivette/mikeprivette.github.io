@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    {{ partial "head.html" . }}
+    {{ partial "css.html" . }}
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="icon" id="theme-icon">&#9788;</span>
+        <span id="theme-label">light</span>
+    </button>
+
+    <div class="container">
+        {{ block "main" . }}{{ end }}
+
+        <footer class="footer"></footer>
+    </div>
+
+    {{ partial "theme-js.html" . }}
+</body>
+</html>

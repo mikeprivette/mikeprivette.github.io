@@ -1,0 +1,83 @@
+{{ define "main" }}
+        <header class="header">
+            <div class="prompt">mike.privette</div>
+            <h1 class="name">Mike Privette<span class="cursor-blink" aria-hidden="true"></span></h1>
+            <div class="tagline">Cybersecurity economist · <span class="highlight">Market intelligence for an opaque industry</span></div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-label">About</h2>
+            <p>I study how money moves through cybersecurity. I spent nearly two decades building and leading security programs at banks, insurers, and enterprises — now I map the market from the outside.</p>
+            <p>I run a market intelligence business that sits at the intersection of practitioner knowledge and capital flows. I advise investors, brief governments, and publish the data the industry lacks.</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-label">Work</h2>
+            <div class="work-item">
+                <div class="work-title"><a href="https://www.returnonsecurity.com" target="_blank" rel="noopener">Return on Security</a></div>
+                <div class="work-desc">Cybersecurity market intelligence — a curated company database, weekly funding analysis, and original research for investors and operators.</div>
+                <div class="work-meta">
+                    <span class="tag">newsletter</span>
+                    <span class="tag">data</span>
+                    <span class="tag">market intelligence</span>
+                </div>
+            </div>
+            <div class="work-item">
+                <div class="work-title">Advisory &amp; Angel Investing</div>
+                <div class="work-desc">Advising cybersecurity startups and investors on market positioning, go-to-market strategy, and competitive dynamics. Active angel investor in early-stage security companies.</div>
+                <div class="work-meta">
+                    <span class="tag">advisory</span>
+                    <span class="tag">investing</span>
+                    <span class="tag">startups</span>
+                </div>
+            </div>
+            <div class="work-item">
+                <div class="work-title"><a href="https://github.com/mikeprivette/ai-security-shared-responsibility" target="_blank" rel="noopener">AI Security Shared Responsibility Model</a></div>
+                <div class="work-desc">Open-source framework for understanding security responsibilities across AI system stakeholders.</div>
+                <div class="work-meta">
+                    <span class="tag">open source</span>
+                    <span class="tag">framework</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-label">Now</h2>
+            <div class="now-item">Building data infrastructure to make cybersecurity market intelligence programmable</div>
+            <div class="now-item">Publishing weekly analysis on cybersecurity venture funding and market dynamics</div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-label">Previously</h2>
+            <p>CISO and security leadership across financial services — regional banks, global banks, insurance. Built programs, led engineering and risk teams, and learned how enterprises actually buy and deploy security.</p>
+        </section>
+
+        {{ if .Site.RegularPages }}
+        <section class="section">
+            <h2 class="section-label">Writing</h2>
+            <ul class="post-list">
+                {{ range first 3 (where .Site.RegularPages "Section" "writing") }}
+                <li class="post-item">
+                    <div class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+                    <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+                    {{ with .Description }}<div class="post-summary">{{ . }}</div>{{ end }}
+                </li>
+                {{ end }}
+            </ul>
+            <div style="margin-top: 1rem;">
+                <a href="/writing/" class="back-link" style="margin-bottom: 0;">All writing →</a>
+            </div>
+        </section>
+        {{ end }}
+
+        <section class="section">
+            <h2 class="section-label">Elsewhere</h2>
+            <div class="links">
+                <a href="https://www.returnonsecurity.com" target="_blank" rel="noopener">Newsletter</a>
+                <a href="https://www.linkedin.com/in/mikeprivette/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://x.com/mikepsecuritee" target="_blank" rel="noopener">X</a>
+                <a href="https://github.com/mikeprivette" target="_blank" rel="noopener">GitHub</a>
+                <a href="mailto:mike@returnonsecurity.com">Email</a>
+            </div>
+        </section>
+{{ end }}
