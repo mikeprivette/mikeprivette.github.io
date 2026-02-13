@@ -32,8 +32,9 @@
     <!-- Theme detection: runs before paint to prevent FOUC -->
     <script>
         (function() {
-            var saved = localStorage.getItem('theme');
-            if (saved) {
+            var saved;
+            try { saved = localStorage.getItem('theme'); } catch (e) {}
+            if (saved === 'dark' || saved === 'light') {
                 document.documentElement.setAttribute('data-theme', saved);
             } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
                 document.documentElement.setAttribute('data-theme', 'light');
@@ -62,7 +63,7 @@
             --border: #d5d2c8;
             --text: #3d3b37;
             --text-bright: #1a1918;
-            --text-dim: #8a8780;
+            --text-dim: #706d66;
             --accent: #2d7d3a;
             --accent-dim: #dde8d6;
             --amber: #b07d18;
@@ -169,7 +170,7 @@
             animation: fadeIn 0.4s ease 0.2s forwards;
         }
 
-        .tagline em { color: var(--amber); font-style: normal; }
+        .tagline .highlight { color: var(--amber); }
 
         /* Sections */
         .section {
@@ -178,11 +179,11 @@
             animation: fadeIn 0.5s ease forwards;
         }
 
-        .section:nth-child(2) { animation-delay: 0.3s; }
-        .section:nth-child(3) { animation-delay: 0.4s; }
-        .section:nth-child(4) { animation-delay: 0.5s; }
-        .section:nth-child(5) { animation-delay: 0.6s; }
-        .section:nth-child(6) { animation-delay: 0.7s; }
+        .section:nth-of-type(1) { animation-delay: 0.3s; }
+        .section:nth-of-type(2) { animation-delay: 0.4s; }
+        .section:nth-of-type(3) { animation-delay: 0.5s; }
+        .section:nth-of-type(4) { animation-delay: 0.6s; }
+        .section:nth-of-type(5) { animation-delay: 0.7s; }
 
         .section-label {
             font-size: 0.7rem;
@@ -336,8 +337,8 @@
     <div class="container">
         <header class="header">
             <div class="prompt">mike.privette</div>
-            <h1 class="name">Mike Privette<span class="cursor-blink"></span></h1>
-            <div class="tagline">Cybersecurity economist · <em>Market intelligence for an opaque industry</em></div>
+            <h1 class="name">Mike Privette<span class="cursor-blink" aria-hidden="true"></span></h1>
+            <div class="tagline">Cybersecurity economist · <span class="highlight">Market intelligence for an opaque industry</span></div>
         </header>
 
         <section class="section">
@@ -408,19 +409,21 @@
             var html = document.documentElement;
             var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
             html.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
             updateToggle(next);
             updateThemeColor(next);
         }
 
         function updateToggle(theme) {
-            document.getElementById('theme-icon').textContent = theme === 'dark' ? '\u263C' : '\u263E';
-            document.getElementById('theme-label').textContent = theme === 'dark' ? 'light' : 'dark';
+            var icon = document.getElementById('theme-icon');
+            var label = document.getElementById('theme-label');
+            if (icon) icon.textContent = theme === 'dark' ? '\u263C' : '\u263E';
+            if (label) label.textContent = theme === 'dark' ? 'light' : 'dark';
         }
 
         function updateThemeColor(theme) {
             var meta = document.querySelector('meta[name="theme-color"]');
-            meta.setAttribute('content', theme === 'dark' ? '#0a0e14' : '#f6f5f0');
+            if (meta) meta.setAttribute('content', theme === 'dark' ? '#0a0e14' : '#f6f5f0');
         }
 
         // Sync toggle UI and theme-color meta with the theme already set in <head>
