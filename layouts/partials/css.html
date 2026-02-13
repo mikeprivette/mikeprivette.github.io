@@ -58,7 +58,7 @@
     .container {
         max-width: 780px;
         margin: 0 auto;
-        padding: 3rem 2rem 6rem;
+        padding: 4rem 2rem 6rem;
     }
 
     /* Theme toggle */
@@ -92,8 +92,8 @@
 
     /* Header */
     .header {
-        margin-bottom: 3rem;
-        padding-bottom: 2rem;
+        margin-bottom: 3.5rem;
+        padding-bottom: 2.5rem;
         border-bottom: 1px solid var(--border);
     }
 
@@ -131,9 +131,16 @@
 
     /* Sections */
     .section {
-        margin-bottom: 2.5rem;
+        margin-bottom: 3.5rem;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid var(--border);
         opacity: 0;
         animation: fadeIn 0.5s ease forwards;
+    }
+
+    .section:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
     }
 
     .section:nth-of-type(1) { animation-delay: 0.3s; }
@@ -149,7 +156,7 @@
         color: var(--accent);
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        margin-bottom: 1rem;
+        margin-bottom: 1.25rem;
     }
 
     .section-label::before { content: '## '; color: var(--text-dim); }
@@ -157,15 +164,16 @@
     p {
         font-size: 0.95rem;
         font-weight: 300;
-        margin-bottom: 1rem;
+        margin-bottom: 1.15rem;
         color: var(--text);
+        line-height: 1.75;
     }
 
     p:last-child { margin-bottom: 0; }
 
     /* Work items */
     .work-item {
-        padding: 1rem 0;
+        padding: 1.25rem 0;
         border-bottom: 1px solid var(--border);
         transition: border-color 0.3s ease;
     }
@@ -188,9 +196,9 @@
 
     .work-title a:hover { color: var(--accent); border-color: var(--accent); }
 
-    .work-desc { font-size: 0.95rem; color: var(--text-dim); font-weight: 300; }
+    .work-desc { font-size: 0.95rem; color: var(--text-dim); font-weight: 300; margin-top: 0.25rem; line-height: 1.6; }
 
-    .work-meta { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.35rem; }
+    .work-meta { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.5rem; }
 
     .tag {
         display: inline-block;
@@ -199,7 +207,8 @@
         background: var(--accent-dim);
         padding: 0.15rem 0.5rem;
         border-radius: 2px;
-        margin-right: 0.35rem;
+        margin-right: 0.4rem;
+        margin-top: 0.25rem;
         font-weight: 400;
         transition: background 0.3s ease;
     }
@@ -208,7 +217,7 @@
     .links {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.5rem 1.5rem;
+        gap: 0.75rem 1.75rem;
     }
 
     .links a {
@@ -228,7 +237,7 @@
 
     /* Now section */
     .now-item {
-        padding: 0.5rem 0;
+        padding: 0.65rem 0;
         font-size: 1rem;
         font-weight: 300;
         color: var(--text);
@@ -397,8 +406,8 @@
 
     /* Footer */
     .footer {
-        margin-top: 3rem;
-        padding-top: 1.5rem;
+        margin-top: 4rem;
+        padding-top: 2rem;
         border-top: 1px solid var(--border);
         font-size: 0.8rem;
         color: var(--text-dim);
@@ -438,17 +447,32 @@
     }
 
     @media (max-width: 768px) {
-        .container { padding: 2.5rem 1.5rem 5rem; }
+        .container { padding: 3rem 1.5rem 5rem; }
         .name { font-size: 2rem; }
+        .header { margin-bottom: 3rem; padding-bottom: 2rem; }
+        .section { margin-bottom: 3rem; padding-bottom: 2.5rem; }
+        .work-desc { font-size: 0.9rem; }
+    }
+
+    @media (max-width: 640px) {
+        .container { padding: 2.5rem 1.5rem 4.5rem; }
+        .name { font-size: 1.85rem; }
+        .tagline { font-size: 0.95rem; }
+        .section { margin-bottom: 2.5rem; padding-bottom: 2rem; }
+        .links { gap: 0.75rem 1.25rem; }
+        .article-title { font-size: 1.4rem; }
     }
 
     @media (max-width: 480px) {
         .container { padding: 2rem 1.25rem 4rem; }
         .name { font-size: 1.7rem; }
         .tagline { font-size: 0.9rem; }
+        .section { margin-bottom: 2rem; padding-bottom: 1.75rem; }
         .links { flex-direction: column; gap: 0.75rem; }
         .theme-toggle { top: 0.75rem; right: 0.75rem; }
         .section-label { font-size: 1rem; }
         .article-title { font-size: 1.3rem; }
+        .header { margin-bottom: 2.5rem; padding-bottom: 1.75rem; }
+        .footer { margin-top: 3rem; }
     }
 </style>
