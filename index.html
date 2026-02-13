@@ -11,7 +11,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Mike Privette — Cybersecurity Economist">
-    <meta property="og:description" content="Market intelligence for an opaque industry. Funding analysis, original research, and government briefings on cybersecurity market dynamics.">
+    <meta property="og:description" content="Market intelligence for an opaque industry. Funding analysis, original research, and advisory on cybersecurity market dynamics.">
     <meta property="og:url" content="https://mikeprivette.com/">
     <meta property="og:site_name" content="Mike Privette">
 
@@ -19,7 +19,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@mikepsecuritee">
     <meta name="twitter:title" content="Mike Privette — Cybersecurity Economist">
-    <meta name="twitter:description" content="Market intelligence for an opaque industry. Funding analysis, original research, and government briefings on cybersecurity market dynamics.">
+    <meta name="twitter:description" content="Market intelligence for an opaque industry. Funding analysis, original research, and advisory on cybersecurity market dynamics.">
 
     <!-- Favicon: terminal cursor -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▋</text></svg>">
@@ -28,6 +28,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mike Privette",
+        "url": "https://mikeprivette.com",
+        "jobTitle": "Cybersecurity Economist",
+        "description": "Market intelligence for an opaque industry. Funding analysis, original research, and advisory on cybersecurity market dynamics.",
+        "sameAs": [
+            "https://www.linkedin.com/in/mikeprivette/",
+            "https://x.com/mikepsecuritee",
+            "https://github.com/mikeprivette",
+            "https://www.returnonsecurity.com"
+        ],
+        "knowsAbout": ["Cybersecurity", "Market Intelligence", "Venture Capital", "Cybersecurity Economics"],
+        "email": "mike@returnonsecurity.com"
+    }
+    </script>
 
     <!-- Theme detection: runs before paint to prevent FOUC -->
     <script>
@@ -73,7 +93,7 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html { font-size: 16px; scroll-behavior: smooth; }
+        html { font-size: 18px; scroll-behavior: smooth; }
 
         body {
             font-family: 'JetBrains Mono', monospace;
@@ -186,11 +206,11 @@
         .section:nth-of-type(5) { animation-delay: 0.7s; }
 
         .section-label {
-            font-size: 0.7rem;
-            font-weight: 500;
+            font-size: 1.1rem;
+            font-weight: 700;
             color: var(--accent);
             text-transform: uppercase;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.1em;
             margin-bottom: 1rem;
         }
 
@@ -230,7 +250,7 @@
 
         .work-title a:hover { color: var(--accent); border-color: var(--accent); }
 
-        .work-desc { font-size: 0.78rem; color: var(--text-dim); font-weight: 300; }
+        .work-desc { font-size: 0.85rem; color: var(--text-dim); font-weight: 300; }
 
         .work-meta { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.35rem; }
 
@@ -254,7 +274,7 @@
         }
 
         .links a {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: var(--text-dim);
             text-decoration: none;
             font-weight: 400;
@@ -271,7 +291,7 @@
         /* Now section */
         .now-item {
             padding: 0.5rem 0;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 300;
             color: var(--text);
         }
@@ -359,15 +379,16 @@
                 </div>
             </div>
             <div class="work-item">
-                <div class="work-title">Government Briefings</div>
-                <div class="work-desc">Regular market intelligence briefings for GCHQ, NCSC, and allied security organizations on cybersecurity market dynamics and funding trends.</div>
+                <div class="work-title">Advisory &amp; Angel Investing</div>
+                <div class="work-desc">Advising cybersecurity startups and investors on market positioning, go-to-market strategy, and competitive dynamics. Active angel investor in early-stage security companies.</div>
                 <div class="work-meta">
                     <span class="tag">advisory</span>
-                    <span class="tag">policy</span>
+                    <span class="tag">investing</span>
+                    <span class="tag">startups</span>
                 </div>
             </div>
             <div class="work-item">
-                <div class="work-title">AI Security Shared Responsibility Model</div>
+                <div class="work-title"><a href="https://github.com/mikeprivette/ai-security-shared-responsibility" target="_blank" rel="noopener">AI Security Shared Responsibility Model</a></div>
                 <div class="work-desc">Open-source framework for understanding security responsibilities across AI system stakeholders.</div>
                 <div class="work-meta">
                     <span class="tag">open source</span>
@@ -380,7 +401,6 @@
             <h2 class="section-label">Now</h2>
             <div class="now-item">Building data infrastructure to make cybersecurity market intelligence programmable</div>
             <div class="now-item">Writing weekly for 16,000+ subscribers tracking cybersecurity capital flows</div>
-            <div class="now-item">Exploring buy-side M&amp;A advisory for PE firms in cybersecurity</div>
         </section>
 
         <section class="section">
@@ -399,9 +419,7 @@
             </div>
         </section>
 
-        <footer class="footer">
-            <div class="location">Based in London · American abroad · Building in public</div>
-        </footer>
+        <footer class="footer"></footer>
     </div>
 
     <script>
