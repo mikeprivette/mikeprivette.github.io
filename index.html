@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Privette — Cybersecurity Economist</title>
+    <meta name="description" content="Cybersecurity economist. Market intelligence for an opaque industry.">
+    <meta name="theme-color" content="#0a0e14">
+    <link rel="canonical" href="https://mikeprivette.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mike Privette — Cybersecurity Economist">
+    <meta property="og:description" content="Market intelligence for an opaque industry. Funding analysis, original research, and government briefings on cybersecurity market dynamics.">
+    <meta property="og:url" content="https://mikeprivette.com/">
+    <meta property="og:site_name" content="Mike Privette">
+
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mikepsecuritee">
+    <meta name="twitter:title" content="Mike Privette — Cybersecurity Economist">
+    <meta name="twitter:description" content="Market intelligence for an opaque industry. Funding analysis, original research, and government briefings on cybersecurity market dynamics.">
+
+    <!-- Favicon: terminal cursor -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▋</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap">
+
+    <style>
+        /* ===== DARK THEME (default) ===== */
+        :root, [data-theme="dark"] {
+            --bg: #0a0e14;
+            --surface: #0d1117;
+            --border: #1a2332;
+            --text: #c9d1d9;
+            --text-bright: #f0f6fc;
+            --text-dim: #6e7681;
+            --accent: #3fb950;
+            --accent-dim: #1a3a2a;
+            --link: #58a6ff;
+            --amber: #d29922;
+            --scanline-opacity: 0.03;
+            --toggle-bg: #1a2332;
+        }
+
+        /* ===== LIGHT THEME ===== */
+        [data-theme="light"] {
+            --bg: #f6f5f0;
+            --surface: #eceae3;
+            --border: #d5d2c8;
+            --text: #3d3b37;
+            --text-bright: #1a1918;
+            --text-dim: #8a8780;
+            --accent: #2d7d3a;
+            --accent-dim: #dde8d6;
+            --link: #2563aa;
+            --amber: #b07d18;
+            --scanline-opacity: 0.015;
+            --toggle-bg: #d5d2c8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { font-size: 16px; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        /* Scanline overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            background: repeating-linear-gradient(
+                0deg, transparent, transparent 2px,
+                rgba(0,0,0, var(--scanline-opacity)) 2px,
+                rgba(0,0,0, var(--scanline-opacity)) 4px
+            );
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 6rem;
+        }
+
+        /* Theme toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 1.25rem;
+            right: 1.25rem;
+            z-index: 999;
+            background: var(--toggle-bg);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 0.4rem 0.6rem;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .theme-toggle:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .theme-toggle .icon { font-size: 0.8rem; line-height: 1; }
+
+        /* Header */
+        .header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .prompt {
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+            opacity: 0;
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        .prompt::before { content: '~/ '; color: var(--text-dim); }
+
+        .name {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-bright);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            opacity: 0;
+            animation: fadeIn 0.4s ease 0.1s forwards;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            font-weight: 300;
+            opacity: 0;
+            animation: fadeIn 0.4s ease 0.2s forwards;
+        }
+
+        .tagline em { color: var(--amber); font-style: normal; }
+
+        /* Sections */
+        .section {
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.3s; }
+        .section:nth-child(3) { animation-delay: 0.4s; }
+        .section:nth-child(4) { animation-delay: 0.5s; }
+        .section:nth-child(5) { animation-delay: 0.6s; }
+        .section:nth-child(6) { animation-delay: 0.7s; }
+
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+        }
+
+        .section-label::before { content: '## '; color: var(--text-dim); }
+
+        p {
+            font-size: 0.85rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        p:last-child { margin-bottom: 0; }
+
+        /* Work items */
+        .work-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.3s ease;
+        }
+
+        .work-item:last-child { border-bottom: none; }
+
+        .work-title {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-bright);
+            margin-bottom: 0.25rem;
+        }
+
+        .work-title a {
+            color: var(--text-bright);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .work-title a:hover { color: var(--accent); border-color: var(--accent); }
+
+        .work-desc { font-size: 0.78rem; color: var(--text-dim); font-weight: 300; }
+
+        .work-meta { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.35rem; }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            color: var(--accent);
+            background: var(--accent-dim);
+            padding: 0.15rem 0.5rem;
+            border-radius: 2px;
+            margin-right: 0.35rem;
+            font-weight: 400;
+            transition: background 0.3s ease;
+        }
+
+        /* Links */
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.5rem;
+        }
+
+        .links a {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .links a::before { content: '\2192'; color: var(--border); transition: color 0.2s ease; }
+        .links a:hover { color: var(--accent); }
+        .links a:hover::before { color: var(--accent); }
+
+        /* Now section */
+        .now-item {
+            padding: 0.5rem 0;
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: var(--text);
+        }
+
+        .now-item::before { content: '\25B8 '; color: var(--accent); }
+
+        /* Footer */
+        .footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            font-weight: 300;
+            opacity: 0;
+            animation: fadeIn 0.5s ease 0.8s forwards;
+        }
+
+        .cursor-blink {
+            display: inline-block;
+            width: 8px;
+            height: 1.1em;
+            background: var(--accent);
+            margin-left: 2px;
+            animation: blink 1.2s step-end infinite;
+            vertical-align: text-bottom;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        ::selection { background: var(--accent); color: var(--bg); }
+
+        @media (max-width: 480px) {
+            .container { padding: 2rem 1.25rem 4rem; }
+            .name { font-size: 1.6rem; }
+            .links { flex-direction: column; gap: 0.75rem; }
+            .theme-toggle { top: 0.75rem; right: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="icon" id="theme-icon">&#9788;</span>
+        <span id="theme-label">light</span>
+    </button>
+
+    <div class="container">
+        <header class="header">
+            <div class="prompt">mike.privette</div>
+            <h1 class="name">Mike Privette<span class="cursor-blink"></span></h1>
+            <div class="tagline">Cybersecurity economist · <em>Market intelligence for an opaque industry</em></div>
+        </header>
+
+        <div class="section">
+            <div class="section-label">About</div>
+            <p>I study how money moves through cybersecurity. 18+ years building and leading security programs at banks, insurers, and enterprises — now I map the market from the outside.</p>
+            <p>I run a market intelligence business that sits at the intersection of practitioner knowledge and capital flows. I brief governments, advise investors, and publish the data the industry lacks.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-label">Work</div>
+            <div class="work-item">
+                <div class="work-title"><a href="https://www.returnonsecurity.com" target="_blank" rel="noopener">Return on Security</a></div>
+                <div class="work-desc">Cybersecurity market intelligence — a curated database of 3,500+ companies, weekly funding analysis, and original research for investors and operators.</div>
+                <div class="work-meta">
+                    <span class="tag">newsletter</span>
+                    <span class="tag">data</span>
+                    <span class="tag">market intelligence</span>
+                </div>
+            </div>
+            <div class="work-item">
+                <div class="work-title">Government Briefings</div>
+                <div class="work-desc">Regular market intelligence briefings for GCHQ, NCSC, and allied security organizations on cybersecurity market dynamics and funding trends.</div>
+                <div class="work-meta">
+                    <span class="tag">advisory</span>
+                    <span class="tag">policy</span>
+                </div>
+            </div>
+            <div class="work-item">
+                <div class="work-title">AI Security Shared Responsibility Model</div>
+                <div class="work-desc">Open-source framework for understanding security responsibilities across AI system stakeholders.</div>
+                <div class="work-meta">
+                    <span class="tag">open source</span>
+                    <span class="tag">framework</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-label">Now</div>
+            <div class="now-item">Building data infrastructure to make cybersecurity market intelligence programmable</div>
+            <div class="now-item">Writing weekly for 16,000+ subscribers tracking cybersecurity capital flows</div>
+            <div class="now-item">Exploring buy-side M&amp;A advisory for PE firms in cybersecurity</div>
+        </div>
+
+        <div class="section">
+            <div class="section-label">Previously</div>
+            <p>CISO and security leadership across financial services — regional banks, global banks, insurance. Built programs, led engineering and risk teams, and learned how enterprises actually buy and deploy security.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-label">Elsewhere</div>
+            <div class="links">
+                <a href="https://www.returnonsecurity.com" target="_blank" rel="noopener">Newsletter</a>
+                <a href="https://www.linkedin.com/in/mikeprivette/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://x.com/mikepsecuritee" target="_blank" rel="noopener">X</a>
+                <a href="https://github.com/mikeprivette" target="_blank" rel="noopener">GitHub</a>
+                <a href="mailto:mike@returnonsecurity.com">Email</a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="location">Based in London · American abroad · Building in public</div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            var html = document.documentElement;
+            var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateToggle(next);
+            updateThemeColor(next);
+        }
+
+        function updateToggle(theme) {
+            document.getElementById('theme-icon').textContent = theme === 'dark' ? '\u263C' : '\u263E';
+            document.getElementById('theme-label').textContent = theme === 'dark' ? 'light' : 'dark';
+        }
+
+        function updateThemeColor(theme) {
+            var meta = document.querySelector('meta[name="theme-color"]');
+            meta.setAttribute('content', theme === 'dark' ? '#0a0e14' : '#f6f5f0');
+        }
+
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved) {
+                document.documentElement.setAttribute('data-theme', saved);
+                updateToggle(saved);
+                updateThemeColor(saved);
+            } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+                updateToggle('light');
+                updateThemeColor('light');
+            }
+        })();
+    </script>
+</body>
+</html>
